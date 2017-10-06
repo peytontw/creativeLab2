@@ -1,15 +1,24 @@
-<style>body {
-  background-color: white
-  text-align :center;
+body {
+  background-color: white;
+  text-align: center;
   image-orientation: center;
-
-  #Content: {
-    background: url(https://i.pinimg.com/originals/c1/0c/67/c10c6772257808e7bac82c38888e007b.jpg)
-    border: 2px solid black;
-    opacity: 0.5;
-  }
-
 }
 
-</style>
+#Header, #Footer {
+  vertical-align: middle;
+  height: 20%;
+}
 
+#Footer {
+	background-color: black;
+	color: white;
+}
+
+#Content {
+  background-image: url('blue3.jpg');
+  border: 2px solid black;
+}
+
+div {
+	padding: 50px;
+}

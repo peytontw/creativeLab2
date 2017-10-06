@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <div id="Everything">
 
     <div id="Header">
       <h1>Dog Picture Generator</h1>
@@ -28,16 +27,15 @@
         <input id="breedButton" type="submit" value="Get Dog Breed Pic">
       </form>
 
-    </div>
+      <div id="breedDogPic">
+      </div>
 
-    <div id="breedDogPic">
     </div>
 
     <div id="Footer">
-      <p>Copyright 2017</p>
+      Copyright 2017
     </div>
 
-  </div>
 </body>
 
 <script>
@@ -53,7 +51,7 @@
     var breedName = $("#breedInput").val();
     console.log(breedName);
     e.preventDefault();
-    var breedURL = "https://dog.ceo/api/breed/" + dogName + "/images/random";
+    var breedURL = "https://dog.ceo/api/breed/" + breedName + "/images/random";
     console.log(breedURL);
 
     $.getJSON(breedURL, function(result) {

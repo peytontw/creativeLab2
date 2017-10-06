@@ -3,6 +3,10 @@
 
 <head>
   <title>Dog Picture Generator</title>
+  <link rel="stylesheet" href="dogs.css">
+
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
@@ -12,8 +16,11 @@
       <h1>Dog Picture Generator</h1>
     </div>
 
-    <div id="Container">
+    <div id="Content">
       <p>Type Dog Breed name here:</p>
+      <button id="generatePic" type="button" onclick="generateDogPic()">Random Dog Pic</button>
+      <div id="dogPic">
+      </div>
     </div>
 
     <div id="Footer">
@@ -22,5 +29,15 @@
 
   </div>
 </body>
+
+<script>
+  function generateDogPic() {
+
+    var myurl = "https://dog.ceo/api/breeds/image/random";
+    $.getJSON(myurl, function(result) {
+      $("#dogPic").html("<img src='" + result.message + "'>");
+    });
+  };
+</script>
 
 </html>

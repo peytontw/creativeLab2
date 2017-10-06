@@ -1,15 +1,18 @@
-<style>body {
-  background-color: white
+body {
+  background-color: white;
   text-align :center;
   image-orientation: center;
-
-  #Content: {
-    background: url(https://i.pinimg.com/originals/c1/0c/67/c10c6772257808e7bac82c38888e007b.jpg)
-    border: 2px solid black;
-    opacity: 0.5;
-  }
+  
+  
 
 }
+#Content {
+  background-image:: url(https://i.pinimg.com/originals/c1/0c/67/c10c6772257808e7bac82c38888e007b.jpg)
+  border: 2px solid black;
+}
+footer{
+  background-image:: url(https://i.pinimg.com/originals/c1/0c/67/c10c6772257808e7bac82c38888e007b.jpg)
+  border: 2px solid black;
+}
 
-</style>
 

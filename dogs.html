@@ -18,9 +18,19 @@
 
     <div id="Content">
       <p>Type Dog Breed name here:</p>
-      <button id="generatePic" type="button" onclick="generateDogPic()">Random Dog Pic</button>
-      <div id="dogPic">
+      <button id="randButton" type="button" onclick="generateRandDogPic()">Get Random Dog Pic</button>
+
+      <div id="randDogPic">
       </div>
+
+      <form>
+        Enter A Dog Breed: <input type="text" id="breedInput" value=""><br>
+        <input id="breedButton" type="submit" value="Get Dog Breed Pic">
+      </form>
+
+    </div>
+
+    <div id="breedDogPic">
     </div>
 
     <div id="Footer">
@@ -31,13 +41,25 @@
 </body>
 
 <script>
-  function generateDogPic() {
-
-    var myurl = "https://dog.ceo/api/breeds/image/random";
-    $.getJSON(myurl, function(result) {
-      $("#dogPic").html("<img src='" + result.message + "'>");
+  function generateRandDogPic() {
+    var randURL = "https://dog.ceo/api/breeds/image/random";
+    $.getJSON(randURL, function(result) {
+      $("#randDogPic").html("<img src='" + result.message + "'>");
     });
   };
+
+
+  $("#breedButton").click(function(e) {
+    var breedName = $("#breedInput").val();
+    console.log(breedName);
+    e.preventDefault();
+    var breedURL = "https://dog.ceo/api/breed/" + dogName + "/images/random";
+    console.log(breedURL);
+
+    $.getJSON(breedURL, function(result) {
+      $("#breedDogPic").html("<img src='" + result.message + "'>");
+    });
+  });
 </script>
 
 </html>

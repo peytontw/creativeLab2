@@ -5,7 +5,6 @@ body {
 }
 
 #Header, #Footer {
-  vertical-align: middle;
   height: 20%;
 }
 
@@ -14,9 +13,19 @@ body {
 	color: white;
 }
 
-#Content {
+#Content, #BreedsTable {
   background-image: url('blue3.jpg');
   border: 2px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td {
+  padding: 15px;
+  border: 1px solid black;
 }
 
 div {
